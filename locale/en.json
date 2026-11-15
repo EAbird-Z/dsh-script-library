@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Script library",
+    "description": "Scan for scripts written since the last sweep, then add the reusable ones to the shared library registry so any workspace can call them.",
+    "detail": "docs/DETAIL.md"
+  }
+}

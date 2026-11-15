@@ -1,0 +1,54 @@
+{
+  "name": "dsh-script-library",
+  "version": "1.0.1",
+  "description": "Scan for scripts written since the last sweep and register the reusable ones, so every workspace can call them.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EAbird-Z/dsh-script-library.git"
+  },
+  "homepage": "https://github.com/EAbird-Z/dsh-script-library#readme",
+  "bugs": {
+    "url": "https://github.com/EAbird-Z/dsh-script-library/issues"
+  },
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "scripts",
+    "registry",
+    "reuse"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "scripts",
+    "defaults",
+    "locale/*.json",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
